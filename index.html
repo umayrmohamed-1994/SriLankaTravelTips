@@ -21,7 +21,6 @@
             text-align: center;
             position: relative;
             background-color: #333;
-            overflow: hidden;
         }
 
         body::before {
@@ -35,15 +34,22 @@
             z-index: -1;
         }
 
+        .content {
+            max-width: 90%;
+            width: 600px;
+            padding: 0 10px;
+        }
+
         h1, p, .button-container {
             margin: 0;
-            padding: 10px 20px;
+            padding: 10px 0;
         }
 
         h1 {
             font-size: 2.5rem;
             font-weight: 600;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            word-wrap: break-word;
         }
 
         p {
@@ -51,6 +57,7 @@
             line-height: 1.6;
             font-weight: 400;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            word-wrap: break-word;
         }
 
         .button-container {
@@ -81,22 +88,23 @@
         }
 
         @media (max-width: 768px) {
+            .content {
+                max-width: 90%;
+                padding: 0 5%;
+            }
+
             h1 {
                 font-size: 2rem;
             }
 
             p {
-                font-size: 1.2rem;
-            }
-
-            body {
-                padding: 10px;
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div>
+    <div class="content">
         <h1>🇱🇰 Sri Lanka, Sorted 🇱🇰</h1>
         <p>Skip the research. I’ve mapped out the best spots to stay, eat, and surf across Sri Lanka. Good times guaranteed.</p>
         
